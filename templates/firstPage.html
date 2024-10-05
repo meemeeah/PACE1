@@ -118,6 +118,25 @@
             }
         }
 
+        /* Image Styling */
+        .welcome-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            animation: rotate 5s linear infinite; /* Add rotation animation */
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
         /* Responsive Design */
         @media (max-width: 600px) {
             .welcome-container {
@@ -146,7 +165,11 @@
     <!-- Welcome Container -->
     <div class="welcome-container">
         <h1>Welcome to explore a world of wonders</h1>
-        <a href="/login">picture</a>
+        
+        <div class="logo-container">
+            <img src="/static/pic1.png" alt="WandWave Logo">
+        </div>
+        
     </div>
 </body>
 </html>
