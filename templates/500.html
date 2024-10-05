@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{500 - Internal Server Error}</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a1a1a, #3a3a3a);
+            font-family: 'Cinzel', serif;
+            height: 100vh;
+            margin: 0;
+            color: #f0f0f0;
+            position: relative;
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        /* Container for the image */
+        .pic-container {
+            position: absolute; /* Allow positioning */
+            bottom: 20px; /* Space from the bottom */
+            right: 20px; /* Space from the right */
+            text-align: center; /* Center image within the container */
+        }
+        .pic-container img {
+            width: 400px; /* Increased size */
+            height: auto;
+            border-radius: 15%; /* Slightly rounded corners */
+            transition: transform 0.3s ease;
+            z-index: 2; /* Ensure the image is above the background */
+        }
+        .pic-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Error message container */
+        .error-container {
+            background-color: rgba(28, 28, 28, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 1), 0 0 40px rgba(255, 215, 0, 0.5); /* Golden glow */
+            text-align: center;
+            width: 90%;
+            max-width: 450px;
+            animation: fadeIn 1s ease-in-out;
+            border: 3px solid #d4af37; /* Golden borders */
+            margin-bottom: 60px; /* Increased space below the error container */
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #d4af37;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #ffcc00;
+            color: black;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        a:hover {
+            background-color: #d4af37;
+            transform: translateY(-2px);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 28px;
+            }
+            p {
+                font-size: 16px;
+            }
+            a {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .pic-container img {
+                width: 250px; /* Smaller size for mobile */
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="error-container">
+        <h1>{500 - Internal Server Error}</h1>
+        <p>{There was an error with the request you made. Please check the input and try again or}</p>
+        <a href="/">Go to Home Page</a>
+    </div>
+    <div class="pic-container">
+        <img src="/static/pic1.png" alt="WandWave Logo">
+    </div>
+</body>
+</html>
